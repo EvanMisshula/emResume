@@ -1,0 +1,234 @@
+\documentclass[9pt]{article}
+\usepackage{fullpage}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[usenames]{color}
+
+\leftmargin=0.25in
+\oddsidemargin=0.25in
+\textwidth=6.0in
+\topmargin=-0.25in
+\textheight=9.25in
+
+\raggedright
+
+
+\pagenumbering{gobble}
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+% DEFINITIONS FOR RESUME
+
+\newenvironment{changemargin}[2]{%
+  \begin{list}{}{%
+    \setlength{\topsep}{0pt}%
+    \setlength{\leftmargin}{#1}%
+    \setlength{\rightmargin}{#2}%
+    \setlength{\listparindent}{\parindent}%
+    \setlength{\itemindent}{\parindent}%
+    \setlength{\parsep}{\parskip}%
+  }%
+  \item[]}{\end{list}
+}
+
+\newcommand{\lineover}{
+	\begin{changemargin}{-0.05in}{-0.05in}
+		\vspace*{-8pt}
+		\hrulefill \\
+		\vspace*{-2pt}
+	\end{changemargin}
+}
+
+\newcommand{\header}[1]{
+	\begin{changemargin}{-0.5in}{-0.5in}
+		\scshape{#1}\\
+  	\lineover
+	\end{changemargin}
+}
+
+\newcommand{\contact}[4]{
+	\begin{changemargin}{-0.5in}{-0.5in}
+		\begin{center}
+			{\Large \scshape {#1}}\\ \smallskip
+			{#2}\\ \smallskip 
+			{#3}\\ \smallskip
+			{#4}\smallskip
+		\end{center}
+	\end{changemargin}
+}
+
+\newenvironment{body} {
+	\vspace*{-16pt}
+	\begin{changemargin}{-0.25in}{-0.5in}
+  }	
+	{\end{changemargin}
+}	
+
+\newcommand{\school}[4]{
+	\textbf{#1} \hfill \emph{#2\\}
+	#3\\ 
+	#4\\
+}
+
+% END RESUME DEFINITIONS
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Name
+\contact{Evan Misshula}
+{http://Misshula.org}{EvanMisshula@gmail.com}
+{(917) 975-7039}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Objective
+\header{Summary of qualifications}
+
+\begin{body}
+  \vspace{14pt} I have published original research in four areas of
+  statistics including machine learning, time series, social networks
+  and spatial statistics.  Additionally, I have fluency in web
+  application development, interactive data visualizaiton and network
+  security including penetration testing.
+\end{body}
+
+\smallskip
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Education
+\header{Education}
+
+\begin{body}
+	\vspace{14pt}
+	\textbf{PhD Criminal Justice (ABD)}{} \hfill \emph{February 2016 (expected)}{} \\
+	\vspace*{-4pt}
+	% \begin{itemize} \itemsep -0pt  % reduce space between items
+	% 	\item Advisors: Jeremy Porter and Jeffery Butts 
+	% \end{itemize}
+	\emph{City University of New York}, New York, NY{} \\
+  \medskip
+	\textbf{BS Applied Math 
+(Operations Research) and BA Economics \& Mathematics} \hfill \emph{May 1988} \\
+	\emph{Yale University}, New Haven, CT\\
+\end{body}
+
+\smallskip
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Publications
+\header{Selected Publications}
+
+\begin{body}
+	\vspace{14pt}
+	``\textbf{A Reexamination of Connectivity Trends via Exponential Random Graph Modeling in Two IDU Risk Networks},'' in \emph{Substance use \& misuse}. 2013.\\
+	\smallskip
+	``\textbf{Network sampling of social divisions in a rural inuit community},'' in \emph{Identities}. 2012.\\
+	\smallskip
+	``\textbf{Estimating the Size of the Methamphetamine-Using Population in New York City Using Network Sampling Techniques},'' in \emph{Adv. in Applied Sociology}. 2012.\\
+	\smallskip
+	``\textbf{Dynamics of Methamphetamine Markets in New York City},'' in \emph{Final Technical Report to the National Institute of Justice}. 2011.\\
+\end{body}
+
+\smallskip
+
+
+%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Experience
+\header{Career History}
+
+\begin{body}
+	\vspace{14pt}
+	\textbf{Statistical Analyst}, \emph{CUNY John Jay Research \& Evaluation} \hfill \emph{July 2012 - Present}\\
+	\vspace*{-4pt}
+	\begin{itemize} \itemsep -0pt  % reduce space between items
+		\item Responsible for designing statistical tests for  a wide variety of projects
+                \item Created web mapping tools using d3, TileMill and Leaflet
+                \item Evaluated anti-violence program using DiD and spatial statistics
+	\end{itemize}
+
+	\textbf {Data Science for Social Good}, \emph{University of Chicago} \hfill \emph{Summer 2013}\\
+	\vspace*{-4pt}
+	\begin{itemize} \itemsep -0pt
+		\item Developed neighborhood and property analytics software for Cook County Landbank delivered as a Django/Python application
+		\item Integrated mapping, economic and demographic data
+	\end{itemize}
+
+	\textbf {RF CUNY}, \emph{CUNY} \hfill \emph{February 2010 - May 2013}\\
+	\vspace*{-4pt}
+	\begin{itemize} \itemsep -0pt
+        \item Conducted original research on public health and
+          criminal justice issues including prison simulation,
+          suicide, domestic violence supported by NIH and NSF.
+        \item Conducted original research on detecting causal
+          relations supported by CUNY Advanced Research Collaborative.
+	\end{itemize}
+
+\end{body}
+
+\smallskip
+
+% \newpage{} % uncomment this line if you want to force a new page
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Skills
+\header{Skills}
+
+\begin{body}
+	\vspace{14pt}
+%	\emph{\textbf{Compiled Languages:}}{} C, C++, Java\\
+%	\smallskip
+	\emph{\textbf{Languages:}}{} R, Python, JavaScript, \LaTeX, Ruby, Swift, C, C++, Java\\
+	\smallskip
+	\emph{\textbf{Libraries:}}{} D3.js, Leaflet.js, ggplot2, Django, Rails, Postgres, Pig, Hadoop\\
+%	\smallskip
+%	\emph{\textbf{Operating Systems:}}{} Windows, Mac OS X, Linux, UNIX, Bash, Powershell\\
+\end{body}
+
+\smallskip
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Leadership
+% \header{Leadership Activities}
+
+% \begin{body}
+% 	\vspace{14pt}
+% 	\textbf{Co-founder, President}, Students in Software Engineering (SSE) \hfill {} \emph{Summer 2008 - Spring 2011}\\
+% 	\smallskip
+% 	\textbf{Mentor}, Undergraduate and graduate student mentor \hfill{} \emph{Fall 2007 - Spring 2011}\\
+% \end{body}
+
+% \smallskip
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Awards and Honors
+\header{Awards and Honors}
+
+\begin{body}
+	\vspace{14pt}
+	\textbf{Fellow}, Insight Data Science \hfill{} \emph{Summer 2015}\\
+	\smallskip
+	\textbf{CUNY GC Digital Fellow}, CUNY Graduate Center \hfill{} \emph{2014 -2016}\\
+	\smallskip
+	\textbf{Provost's Digital Initiative grant winner}, CUNY Graduate Center \hfill{} \emph{2013 -2014}\\
+	\smallskip
+	\textbf{Steven and Elly Hammerman ethics across the curriculum}, CUNY John Jay \hfill{} \emph{2012}\\
+	\smallskip
+	\textbf{US Cyberchallenge student fellow}, Eastern Regional Camp (Virginia) \hfill{} \emph{2011 \& 2012}\\
+	\smallskip
+	\textbf{DHS Data Science Summer fellow}, Univ of Illinois, Urbanana-Champaigne \hfill{} \emph{2010}\\
+	\smallskip
+	\textbf{PhD fellowship}, CUNY John Jay \hfill{} \emph{2009 - 2014}\\
+	\smallskip
+	\textbf{Sunshine Scholarship}, College Initiative \hfill{} \emph{2009 - 2014}
+\end{body}
+
+\end{document}
+
+
+
+public health, policing, spatio-temporal analysis, optimal stochastic control, pattern recognition, threat assessment, wireless security, social networks, prisoner reentry
